@@ -13,11 +13,9 @@ export const useJobStore = defineStore('jobs', {
   actions: {
     async loadJobs() {
       try {
-        const response = await axios.get(
-          'https://arbeitnow.com/api/job-board-api'
-        );
-        this.jobs = response.data;
-        console.log(response);
+        const response = await axios.get('https://api.publicapis.org/entries');
+        this.jobs = response.data.entries;
+        console.log(response.data.entries);
       } catch (error) {
         console.error('An error has occurred', error);
       }

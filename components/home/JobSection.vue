@@ -20,17 +20,17 @@
             class="flex flex-col items-start p-0 w-[258px] h-[151px] gap-[7.54px]"
           >
             <Group class="w-[34px] h-[34px]" />
-            <a :href="job.url">
+            <a :href="job.Link">
               <p
                 class="text-black m-0 w-[177px] text-[18px] tracking-[-0.62px] leading-[normal] mt-[5.46405029296875px]"
               >
-                {{ job.title }}
+                {{ job.API }}
               </p>
             </a>
             <p
               class="text-black mb-3 h-[16.07px] w-[177px] text-[14px] tracking-[-0.62px] leading-[normal] mt-[5.46405029296875px]"
             >
-              {{ job.company_name }} - {{ job.remote ? 'Remote' : 'Office' }}
+              {{ job.Description }} - {{ job.Category }}
             </p>
           </div>
         </div>
