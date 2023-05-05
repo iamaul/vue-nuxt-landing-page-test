@@ -1,6 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import eslintPlugin from 'vite-plugin-eslint';
 export default defineNuxtConfig({
+  nitro: {
+    devProxy: {
+      '/api/': {
+        target: 'https://arbeitnow.com/api/job-board-api',
+        changeOrigin: true,
+      },
+    },
+  },
   vite: {
     plugins: [eslintPlugin()],
   },

@@ -13,9 +13,7 @@ export const useJobStore = defineStore('jobs', {
   actions: {
     async loadJobs() {
       try {
-        const response = await axios.get(
-          'https://arbeitnow.com/api/job-board-api'
-        );
+        const response = await axios.get('/api/');
         this.jobs = response.data.data;
         console.log(this.jobs);
         console.log(response.data.data);
